@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tuit</title>
+    </head>
+    <body>
+        <a href="navigation.html">< Back</a>
+
+        <!-- START: CONTENT -->
+        <div class="header">
+            <h1>Tuiter</h1>
+
+            <h2>Tuit</h2>
+        </div>
+
+        <div class="tweet-container">
+            <img
+                src="../assets/profile-pic.webp"
+                alt="profile picture of the owner"
+                height="48"
+                width="48"
+            />
+
+            <textarea
+                name="tweet-text"
+                id="tweet-input"
+                cols="30"
+                rows="3"
+                placeholder="What's happening?"
+            ></textarea>
+            <br />
+            <select id="reply-access">
+                <option selected value="EVERYONE">Everyone can reply</option>
+                <option value="FOLLOWING">People you follow</option>
+                <option value="MENTIONED">Only people you mention</option>
+            </select>
+            <hr />
+            <input type="file" />
+            <button>Tuit</button>
+            <hr />
+        </div>
+    </body>
+</html>
