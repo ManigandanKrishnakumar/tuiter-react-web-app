@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Explore</title>
+        <link rel="stylesheet" href="index.css" />
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </head>
+    <body>
+        <!-- START: EXPLORE CONTAINER -->
+        <div id="explore-container">
+            <span class="wd-fill-content">.</span>
+            <!-- START: HEADER -->
+            <div id="header-container">
+                <!-- START: SEARCH CONTAINER -->
+                <div class="wd-search-container">
+                    <div class="wd-search-bar">
+                        <label class="wd-search-icon" for="search">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                        <input
+                            type="text"
+                            name="search"
+                            id="search-input"
+                            placeholder="Search Twitter"
+                        />
+                    </div>
+                </div>
+
+                <!-- END: SEARCH CONTAINER -->
+
+                <!-- START: SETTINGS CONTAINER -->
+                <div class="wd-settings-container">
+                    <a href="../explore-settings/index.html">
+                        <ion-icon name="settings-outline" id="settings-icon"></ion-icon>
+                    </a>
+                </div>
+                <!-- END: SETTINGS CONTAINER -->
+            </div>
+            <!-- END: HEADER -->
+
+            <!-- START: TABS -->
+            <div class="wd-tabs-container">
+                <ul>
+                    <li>
+                        <a href="">
+                            <input type="radio" name="tab" id="for-you-checkbox" checked />
+                            <label for="for-you-checkbox">For You</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <input type="radio" name="tab" id="trending-checkbox" />
+                            <label for="trending-checkbox">Trending</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <input type="radio" name="tab" id="covid-checkbox" />
+                            <label for="covid-checkbox">COVID-19</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <input type="radio" name="tab" id="news-checkbox" />
+                            <label for="news-checkbox">News</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <input type="radio" name="tab" id="sports-checkbox" />
+                            <label for="sports-checkbox">Sports</label>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <input type="radio" name="tab" id="entertainment-checkbox" />
+                            <label for="entertainment-checkbox">Entertainment</label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- END: TABS -->
+
+            <!-- START: CONTENT SEPARATOR -->
+            <div class="wd-content-separator"></div>
+            <!-- END: CONTENT SEPARATOR -->
+
+            <!-- START: SUGGESTED POSTS -->
+            <div class="wd-suggested-posts-container">
+                <!-- START: STARSHIP POST -->
+                <div class="wd-post">
+                    <div class="wd-post-header">
+                        <span class="wd-trending-topic">Trending in Science</span>
+                        <ion-icon name="ellipsis-horizontal" class="wd-ellipses"></ion-icon>
+                    </div>
+                    <p class="wd-topic">Starship</p>
+                    <span class="wd-tweets-count">55.5K Tweets</span>
+                </div>
+                <!-- END: STARSHIP POST -->
+
+                <!-- START: JOE ROGAN POST -->
+                <div class="wd-post">
+                    <div class="wd-post-header">
+                        <div class="wd-topic-heading">
+                            <span>Sports</span>
+                            <ion-icon name="ellipse" class="wd-separator"></ion-icon>
+                            <span>Trending</span>
+                        </div>
+                        <ion-icon name="ellipsis-horizontal" class="wd-ellipses"></ion-icon>
+                    </div>
+                    <p class="wd-topic">Joe Rogan</p>
+                </div>
+                <!-- END: JOE ROGAN POST -->
+
+                <!-- START: NEW YORK TIMES POST -->
+                <div class="wd-post wd-attachment">
+                    <div class="wd-post-details">
+                        <div class="wd-post-header">
+                            <div class="wd-topic-heading">
+                                <div class="wd-user">
+                                    <img
+                                        class="wd-post-user"
+                                        src="./assets/new-york-times-dp.png"
+                                        alt="nyt-dp"
+                                    />
+                                    <span class="wd-username">The New York Times </span>
+                                    <ion-icon
+                                        name="checkmark-circle"
+                                        class="wd-verified-user"
+                                    ></ion-icon>
+                                </div>
+                                <ion-icon name="ellipse" class="wd-separator"></ion-icon>
+                                <span>Yesterday</span>
+                            </div>
+                        </div>
+                        <p class="wd-topic">
+                            CNN's Cuomo conundrum: A star anchor with a brother in trouble
+                        </p>
+                        <span class="wd-tweets-count">5,218 Tweets</span>
+                    </div>
+
+                    <div class="wd-attachment-image">
+                        <img src="./assets/cuomo.jpg" alt="cuomo" />
+                    </div>
+                </div>
+                <!-- END: NEW YORK TIMES POST -->
+
+                <!-- START: COVID POST -->
+                <div class="wd-post wd-attachment">
+                    <div class="wd-post-details">
+                        <div class="wd-post-header">
+                            <div class="wd-topic-heading">
+                                <span>COVID-19</span>
+                                <ion-icon name="ellipse" class="wd-separator"></ion-icon>
+                                <span>LIVE</span>
+                            </div>
+                        </div>
+                        <p class="wd-topic">COVID-19: News and updates for Massachusetts</p>
+                    </div>
+
+                    <div class="wd-attachment-image">
+                        <img src="./assets/mass-covid.jpg" alt="cuomo" />
+                    </div>
+                </div>
+                <!-- END: COVID POST -->
+
+                <!-- START: BLOOMBERG POST -->
+                <div class="wd-post wd-attachment">
+                    <div class="wd-post-details">
+                        <div class="wd-post-header">
+                            <div class="wd-topic-heading">
+                                <div class="wd-user">
+                                    <img
+                                        class="wd-post-user"
+                                        src="./assets/bloomberg.png"
+                                        alt="nyt-dp"
+                                    />
+                                    <span class="wd-username">Bloomberg Opinion</span>
+                                    <ion-icon
+                                        name="checkmark-circle"
+                                        class="wd-verified-user"
+                                    ></ion-icon>
+                                </div>
+                                <ion-icon name="ellipse" class="wd-separator"></ion-icon>
+                                <span>Yesterday</span>
+                            </div>
+                        </div>
+                        <p class="wd-topic">
+                            CNN's Cuomo conundrum: A star anchor with a brother in trouble
+                        </p>
+                    </div>
+
+                    <div class="wd-attachment-image">
+                        <img src="./assets/vaccine.jpg" alt="vaccine" />
+                    </div>
+                </div>
+                <!-- END: BLOOMBERG POST -->
+
+                <!-- START: WONDER BREAD -->
+                <div class="wd-post">
+                    <div class="wd-post-header">
+                        <span class="wd-trending-topic">Trending in United States</span>
+                        <ion-icon name="ellipsis-horizontal" class="wd-ellipses"></ion-icon>
+                    </div>
+                    <p class="wd-topic">Wonder Bread</p>
+                    <span class="wd-tweets-count">1,259 Tweets</span>
+                </div>
+                <!-- END: WONDER BREAD -->
+            </div>
+            <!-- END: SUGGESTED POSTS   -->
+        </div>
+        <!-- END: EXPLORE CONTAINER -->
+    </body>
+</html>
