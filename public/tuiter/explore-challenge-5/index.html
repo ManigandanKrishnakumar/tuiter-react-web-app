@@ -28,7 +28,7 @@
                             class="list-group-item list-group-item-action"
                             aria-current="true"
                         >
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-twitter twitter-icon"></i>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action">
                             <i class="fas fa-hashtag"></i>
@@ -98,27 +98,45 @@
                     </div>
                     <!-- END: HEADER -->
 
+                    <!-- START: TABS-2 -->
                     <!-- START: TABS -->
-                    <div class="tabs-container">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">For You</a>
+                    <div class="wd-tabs-container">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <input type="radio" name="tab" id="for-you-checkbox" checked />
+                                    <label for="for-you-checkbox">For You</label>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Trending</a>
+                            <li>
+                                <a href="">
+                                    <input type="radio" name="tab" id="trending-checkbox" />
+                                    <label for="trending-checkbox">Trending</label>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">News</a>
+
+                            <li>
+                                <a href="">
+                                    <input type="radio" name="tab" id="news-checkbox" />
+                                    <label for="news-checkbox">News</label>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link">Sports</a>
+                            <li>
+                                <a href="">
+                                    <input type="radio" name="tab" id="sports-checkbox" />
+                                    <label for="sports-checkbox">Sports</label>
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link">Entertainment</a>
+                            <li>
+                                <a href="">
+                                    <input type="radio" name="tab" id="entertainment-checkbox" />
+                                    <label for="entertainment-checkbox">Entertainment</label>
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <!-- END: TABS -->
+                    <!-- END: TABS-2 -->
 
                     <!-- START: BANNER -->
                     <div class="banner-container">
@@ -247,7 +265,7 @@
                 </div>
                 <!-- END: EXPLORE CONTAINER -->
                 <div class="col who-to-follow-container">
-                    <ul class="list-group">
+                    <ul class="list-group follow">
                         <li class="list-group-item follow-heading">Who To Follow</li>
                         <li class="list-group-item">
                             <div class="account-container">
@@ -334,7 +352,20 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="list-group-item">
+                            <span class="show-more">Show More</span>
+                        </li>
                     </ul>
+
+                    <div class="footer-content">
+                        <span class="footer-item">Terms of Service</span>
+                        <span class="footer-item">Privacy Policy</span>
+                        <span class="footer-item">Cookie Policy</span>
+                        <span class="footer-item">Accessibility</span>
+                        <span class="footer-item">Ads info</span>
+                        <span class="footer-item">More ...</span>
+                        <span class="footer-item">© 2023 Twitter, Inc.</span>
+                    </div>
                 </div>
             </div>
             <!-- START:  COLUMNS-->
