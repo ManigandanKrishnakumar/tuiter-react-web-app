@@ -39,7 +39,6 @@ body {
     border: 1px solid black;
     margin: 0 auto;
     color: var(--primary-contrast);
-    border: 1px solid var(--secondary);
     border-top: 0;
     border-bottom: 0;
     height: 100%;
@@ -52,7 +51,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--secondary-contrast);
+    border-left: 1px solid var(--secondary);
+    border-right: 1px solid var(--secondary);
 }
 
 .wd-page-heading .wd-page-name,
@@ -76,6 +76,7 @@ body {
 
 /* BOOKMARKED TWEETS */
 .wd-bookmarks-container {
+    border: 1px solid var(--secondary);
 }
 
 .wd-tweet {
