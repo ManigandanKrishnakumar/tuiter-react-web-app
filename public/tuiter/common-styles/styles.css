@@ -1,0 +1,17 @@
+:root {
+    --primary: #fff;
+    --primary-contrast: #000;
+    --secondary: #f0f3f4;
+    --secondary-contrast: #8d99a1;
+    --tertiary: #1d9bf0;
+    --tertiary-contrast: #fff;
+    --border-color: rgba(240, 243, 244, 1);
+    --border: 1px solid var(--border-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
