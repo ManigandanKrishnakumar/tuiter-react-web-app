@@ -1,30 +1,25 @@
-:root {
-    --primary: #FFF;
-    --primary-contrast: #000;
-    --secondary: #F0F3F4;
-    --secondary-contrast: #8D99A1;
-    --tertiary: #1d9bf0;
-    --tertiary-contrast: #FFF;
-    --border-color: rgba(240, 243, 244, 1);
-    --border: 1px solid var(--border-color);
+#wd-explore {
+    padding-top: 10px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-        Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.box {
-    height: 500px;
-    background-color: aqua;
-    border: 1px solid black;
+/* Customizations */
+.list-group,
+.list-group-item {
+    border: none;
 }
 
 .list-group a.active {
-    background-color: var(--tertiary);
+    background-color: unset;
+    color: var(--primary-contrast);
+}
+
+a.active .link-label {
+    font-weight: 700;
+}
+
+.twitter-icon {
+    color: var(--tertiary);
+    font-size: 1.5rem;
 }
 
 #explore-container {
@@ -33,31 +28,32 @@
 
 /* PAGES */
 .link-label {
-    font-weight: 600;
+    font-weight: 400;
     margin-left: 10px;
 }
 
-.tuit-button, .action-button {
+.tuit-button,
+.action-button {
     margin-top: 10px;
     padding: 10px;
     border: 0;
     outline: none;
     width: 100%;
+    max-width: 200px;
     border-radius: 20px;
     background-color: var(--tertiary);
     color: var(--tertiary-contrast);
     font-weight: 600;
 }
 
-
-.tweet-icon  {
+.tweet-icon {
     display: none;
 }
 
 /* ---------------- START: EXPLORE CONTENT  ------------------------*/
 .explore-content-container {
     height: 100%;
-    padding: 0;
+    padding: 0 20px;
 }
 /* HEADER */
 #header-container {
@@ -73,6 +69,7 @@
 /* SEARCH BAR */
 .wd-search-container {
     flex: 1;
+    padding-right: 30px;
 }
 .wd-search-bar {
     background-color: var(--secondary);
@@ -105,15 +102,53 @@
     margin-left: 10px;
 }
 .wd-settings-container #settings-icon {
-    color: var(--tertiary);
+    color: var(--primary-contrast);
     font-size: 1.5em;
     font-weight: bold;
-    
 }
 
 /* TABS */
 .tabs-container {
     margin-top: 10px;
+}
+
+/* TABS */
+.wd-tabs-container {
+    margin-top: 15px;
+    border-bottom: var(--border);
+    padding: 0 5px;
+}
+.wd-tabs-container > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wd-tabs-container li {
+    padding: 0;
+}
+
+.wd-tabs-container a {
+    color: var(--secondary-contrast);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.wd-tabs-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wd-tabs-container input {
+    display: none;
+}
+
+.wd-tabs-container input:checked + label {
+    color: var(--tertiary);
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--tertiary);
 }
 
 /* BANNER */
@@ -125,9 +160,9 @@
     width: 100%;
 }
 .banner-text {
-    position:absolute;
+    position: absolute;
     bottom: 5px;
-    left:10px;
+    left: 10px;
     z-index: 1;
     color: var(--primary);
     font-size: 2rem;
@@ -136,7 +171,6 @@
 
 /* SUGGESTED POSTS */
 .wd-suggested-posts-container {
-  
     border-left: var(--border);
     border-right: var(--border);
 }
@@ -146,9 +180,6 @@
 }
 
 .wd-post-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .wd-trending-topic,
@@ -200,16 +231,17 @@
 
 .wd-attachment-image img {
     --width: 100%;
-    
+
     width: var(--width);
     border-radius: 10px;
+    margin-left: 10px;
 }
 .wd-post-details {
     flex: 4;
 }
 
 .wd-attachment-image {
-    flex: 1
+    flex: 1;
 }
 .wd-post.wd-attachment {
     display: flex;
@@ -220,6 +252,14 @@
 
 /* ---------------- START: WHO TO FOLLOW -------------------- */
 /* WHO TO FOLLOW */
+.list-group.follow {
+    border-radius: 10px;
+}
+
+.list-group.follow li {
+    background-color: var(--secondary);
+}
+
 .follow-heading {
     font-weight: 700;
     font-size: 1rem;
@@ -255,20 +295,43 @@
 }
 
 .follow-button {
-    flex: 0.3;
+    flex: 0.5;
 }
 
 .follow-button .action-button {
+    margin: 0;
     padding: 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    background-color: var(--primary-contrast);
+    color: var(--primary);
+}
+
+.show-more {
+    font-size: 0.9rem;
+    color: var(--tertiary);
+}
+
+.footer-content {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    color: var(--secondary-contrast);
+    margin-left: 10px;
     font-size: 0.8rem;
+}
+
+.footer-item:last-child {
+    width: 100%;
 }
 /* ---------------- END: WHO TO FOLLOW -------------------- */
 
-
-
 /* MEDIA QUERIES */
 
-@media screen and (width < 1200px)  {
+@media screen and (width < 1200px) {
     .pages-container {
         max-width: 100px;
     }
@@ -290,9 +353,15 @@
     .who-to-follow-container {
         display: none;
     }
-
+    .pages-container {
+        max-width: 75px;
+    }
     .explore-content-container {
         flex: 1;
         padding-right: 10px;
+    }
+
+    .wd-tabs-container a {
+        font-size: smaller;
     }
 }
