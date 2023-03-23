@@ -83,9 +83,10 @@ body {
 .wd-tweet {
     padding: 12px 16px;
     display: flex;
-    border-bottom: 1px solid var(--secondary-contrast);
-    border-left: 1px solid var(--secondary-contrast);
-    border-right: 1px solid var(--secondary-contrast);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .wd-profile-pic img {

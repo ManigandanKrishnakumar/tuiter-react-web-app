@@ -1,0 +1,29 @@
+.banner-wrapper {
+    position: relative;
+}
+.banner-wrapper,
+.banner-img {
+    width: 100%;
+}
+
+.dp {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    height: 50%;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: translateY(50%);
+    background-color: white;
+}
+
+.btn.wd-edit-profile-btn {
+    float: right;
+    border-radius: calc(35px / 2);
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.clear-fix {
+    clear: both;
+}

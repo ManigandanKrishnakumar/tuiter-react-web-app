@@ -1,16 +1,19 @@
 import React from 'react';
+
+import { useSelector } from 'react-redux';
+
 import TuitItem from './tuit-item';
-import tuits from './tuits';
 
 import './index.css';
 
 const TuitsList = () => {
+    const feeds = useSelector((state) => state.feeds);
     return (
-        <>
-            {tuits.map((tuit) => {
-                return <TuitItem tuit={tuit} key={tuit.id} />;
+        <div className="tuits-container">
+            {feeds.map((feed) => {
+                return <TuitItem tuit={feed} key={feed.id} />;
             })}
-        </>
+        </div>
     );
 };
 

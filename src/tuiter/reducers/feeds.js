@@ -1,4 +1,4 @@
-const tuits = [
+const feeds = [
     {
         id: 1,
         dp: '/images/cuomo.jpg',
@@ -18,7 +18,7 @@ const tuits = [
         industry. Lorem Ipsum has been the industry's standard dummy
         text ever since the 1500s`
         },
-
+        liked: true,
         metrics: {
             comments: 22,
             retweets: 9,
@@ -44,6 +44,7 @@ const tuits = [
         industry. Lorem Ipsum has been the industry's standard dummy
         text ever since the 1500s`
         },
+        liked: true,
 
         metrics: {
             comments: 25,
@@ -53,4 +54,4 @@ const tuits = [
     }
 ];
 
-export default tuits;
+export default feeds;

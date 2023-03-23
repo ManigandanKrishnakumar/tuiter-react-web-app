@@ -1,6 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteTuit } from '../reducers/feeds-reducer';
+
+import './tuit-item.css';
 
 const TuitItem = ({ tuit }) => {
+    const dispatch = useDispatch();
+    const deleteTuitHandler = (id) => {
+        dispatch(deleteTuit(id));
+    };
+
     return (
         <div className="wd-tweet">
             <div className="wd-profile-pic">
@@ -20,19 +29,21 @@ const TuitItem = ({ tuit }) => {
 
                 <p className="wd-tweet-text">{tuit.tweetText}</p>
 
-                <div className="wd-link-preview">
-                    <img src={tuit.tweetLink.image} alt="class" />
-                    <div className="wd-link-preview-desciption">
-                        <p className="wd-link-title">{tuit.tweetLink.title}</p>
-                        <p className="wd-link-desc">{tuit.tweetLink.desc}</p>
-                        <p className="wd-link">
-                            <a href="#">
-                                <i className="fa fa-link" aria-hidden="true"></i>
-                                {tuit.tweetLink.linkDisplay}
-                            </a>
-                        </p>
+                {tuit.tweetLink && (
+                    <div className="wd-link-preview">
+                        <img src={tuit.tweetLink.image} alt="class" />
+                        <div className="wd-link-preview-desciption">
+                            <p className="wd-link-title">{tuit.tweetLink.title}</p>
+                            <p className="wd-link-desc">{tuit.tweetLink.desc}</p>
+                            <p className="wd-link">
+                                <a href="#">
+                                    <i className="fa fa-link" aria-hidden="true"></i>
+                                    {tuit.tweetLink.linkDisplay}
+                                </a>
+                            </p>
+                        </div>
                     </div>
-                </div>
+                )}
 
                 <div className="wd-tweet-actions">
                     <div className="wd-action">
@@ -49,7 +60,7 @@ const TuitItem = ({ tuit }) => {
                         </a>
                     </div>
 
-                    <div className="wd-action wd-clicked">
+                    <div className={`wd-action ${tuit.liked ? 'wd-clicked' : ''}`}>
                         <a href="#">
                             <i className="fa fa-heart" aria-hidden="true"></i>
                             <p>{tuit.metrics.likes}</p>
@@ -60,6 +71,11 @@ const TuitItem = ({ tuit }) => {
                         <a href="#">
                             <i className="fa fa-upload" aria-hidden="true"></i>
                         </a>
+                    </div>
+                    <div className="wd-action">
+                        <i
+                            className="bi bi-x-lg float-end"
+                            onClick={() => deleteTuitHandler(tuit._id)}></i>
                     </div>
                 </div>
             </div>
