@@ -1,0 +1,57 @@
+.profile-info-container {
+    margin-top: 20px;
+}
+
+.profile-handle p {
+    margin: 0;
+}
+
+.handle {
+    color: grey;
+}
+
+.profile-bio {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.profile-metadata-container {
+    color: grey;
+    font-size: 14px;
+    display: flex;
+}
+
+.meta-data {
+    margin-left: 15px;
+}
+.meta-data:first-child {
+    margin-left: 0;
+}
+
+.profile-metadata-container .value {
+    margin-left: 5px;
+}
+
+.metrics-container {
+    display: flex;
+    margin-top: 10px;
+}
+
+.metrics-container p {
+    margin: 0;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.metrics-container p:first-child {
+    margin-left: 0;
+}
+
+.metrics-container .count {
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+.metrics-container .label {
+    color: grey;
+}

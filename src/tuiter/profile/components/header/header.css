@@ -1,0 +1,28 @@
+.header-container {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+.back-button {
+    margin-right: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.profile-info p {
+    margin: 0;
+    padding: 0;
+}
+.profile-name {
+    font-weight: bold;
+}
+
+p.total-tweets {
+    font-size: 10px;
+    color: grey;
+    margin-top: -2px;
+}

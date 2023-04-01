@@ -1,0 +1,189 @@
+:root {
+    --primary: #000;
+    --primary-contrast: #fff;
+    --secondary: #202327;
+    --secondary-contrast: #484c50;
+    --tertiary: #1d9bf0;
+    --action-highlight: #e0255e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+        Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--primary-contrast);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.light-grey {
+    color: var(--secondary-contrast);
+}
+
+.wd-fill-content {
+    visibility: hidden;
+}
+
+/* CONTAINER */
+#bookmark-page-container {
+    max-width: 600px;
+    border: 1px solid black;
+    margin: 0 auto;
+    color: var(--primary-contrast);
+    border: 1px solid var(--secondary);
+    border-top: 0;
+    border-bottom: 0;
+    height: 100%;
+}
+
+/* HEADER */
+#header-container {
+    display: flex;
+    padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--secondary-contrast);
+}
+
+.wd-page-heading .wd-page-name,
+.wd-page-heading .wd-username {
+    margin: 0;
+}
+
+.wd-page-heading .wd-page-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.wd-page-heading .wd-username {
+    color: var(--secondary-contrast);
+    font-size: 13px;
+}
+
+.wd-options .blue {
+    color: var(--tertiary);
+}
+
+/* BOOKMARKED TWEETS */
+.wd-bookmarks-container {
+}
+
+.wd-tweet {
+    padding: 12px 16px;
+    display: flex;
+    border-bottom: 1px solid var(--secondary-contrast);
+}
+
+.wd-profile-pic img {
+    --size: 48px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+}
+
+.wd-tweet-content {
+    flex: 2;
+    padding-left: 12px;
+}
+
+.wd-tweet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wd-author-info {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wd-username {
+    font-weight: 500;
+}
+.wd-handle,
+.wd-separator,
+.wd-date {
+    color: var(--secondary-contrast);
+    margin-left: 5px;
+}
+.wd-author-info .wd-separator {
+    font-size: 4px;
+}
+
+.wd-tweet-header .fa-ellipsis-h,
+.wd-tweet-text {
+    font-size: 15px;
+}
+
+.wd-tweet-text {
+    font-weight: 250;
+    margin-top: 5px;
+}
+
+.wd-link-preview {
+    border-radius: 10px;
+    border: 1px solid var(--secondary-contrast);
+    margin-top: 12px;
+}
+
+.wd-link-preview img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.wd-link-preview-desciption {
+    padding: 12px;
+    font-size: 15px;
+}
+
+.wd-link-desc,
+.wd-link a,
+.wd-link {
+    color: var(--secondary-contrast);
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.wd-link .fa-link {
+    transform: rotate(90deg);
+}
+
+.wd-tweet-actions {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wd-action a {
+    display: flex;
+    align-items: center;
+}
+.wd-action a {
+    color: var(--secondary-contrast);
+    text-decoration: none;
+}
+
+.wd-action.wd-clicked a {
+    color: var(--action-highlight);
+}
+.wd-action a p {
+    margin-left: 12px;
+}
+
+.wd-action a p,
+.wd-action a i {
+    font-size: 14px;
+}

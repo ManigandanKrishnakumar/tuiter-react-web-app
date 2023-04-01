@@ -1,0 +1,27 @@
+.edit-profile-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.page-control {
+    display: flex;
+}
+
+i.close {
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.save-button {
+    background-color: black;
+    border-radius: calc(37px / 2);
+    margin-top: 2px;
+}
