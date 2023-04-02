@@ -3,3 +3,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.wd-clicked {
+    color: #dd2e44;
+}

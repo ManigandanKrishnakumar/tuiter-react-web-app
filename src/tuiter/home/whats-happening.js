@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createTuit } from '../reducers/feeds-reducer';
+// import { createTuit } from '../reducers/feeds-reducer';
+import { createTuitThunk } from '../../services/tuits-thunk';
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
     const dispatch = useDispatch();
+    // const tuitClickHandler = () => {
+    //     const newTuit = {
+    //         tweetText: whatsHappening
+    //     };
+    //     dispatch(createTuit(newTuit));
+    // };
     const tuitClickHandler = () => {
         const newTuit = {
             tweetText: whatsHappening
         };
-        dispatch(createTuit(newTuit));
+        dispatch(createTuitThunk(newTuit));
     };
+
     return (
         <div className="row">
             <div className="col-auto">

@@ -1,14 +1,16 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteTuit } from '../reducers/feeds-reducer';
 
 import './tuit-item.css';
+import { deleteTuitThunk, updateTuitThunk } from '../../services/tuits-thunk';
 
 const TuitItem = ({ tuit }) => {
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id));
+        dispatch(deleteTuitThunk(id));
     };
+
+    console.log(tuit.liked);
 
     return (
         <div className="wd-tweet">
@@ -53,15 +55,28 @@ const TuitItem = ({ tuit }) => {
                         </a>
                     </div>
 
-                    <div className="wd-action">
-                        <a href="#">
+                    <div
+                        className="wd-action"
+                        onClick={() => {
+                            const updatedTuit = JSON.parse(JSON.stringify(tuit));
+                            updatedTuit.metrics.retweets += 1;
+                            dispatch(updateTuitThunk(updatedTuit));
+                        }}>
+                        <a>
                             <i className="fa fa-retweet" aria-hidden="true"></i>
                             <p>{tuit.metrics.retweets}</p>
                         </a>
                     </div>
 
-                    <div className={`wd-action ${tuit.liked ? 'wd-clicked' : ''}`}>
-                        <a href="#">
+                    <div
+                        className={`wd-action ${tuit.liked ? 'wd-clicked' : ''}`}
+                        onClick={() => {
+                            const updatedTuit = JSON.parse(JSON.stringify(tuit));
+                            updatedTuit.metrics.likes += 1;
+                            updatedTuit.liked = true;
+                            dispatch(updateTuitThunk(updatedTuit));
+                        }}>
+                        <a>
                             <i className="fa fa-heart" aria-hidden="true"></i>
                             <p>{tuit.metrics.likes}</p>
                         </a>
